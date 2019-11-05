@@ -18,23 +18,25 @@
                   <tr>
                     <th scope="col" class="sort" data-sort="name">ID</th>
                     <th scope="col" class="sort" data-sort="budget">Name</th>
+                    <th scope="col" class="sort" data-sort="budget">Sub Name</th>
                     <th scope="col" class="sort" data-sort="status">Action</th>
                   </tr>
                 </thead>
                 <tbody class="list">
                 	@foreach($categorys as $category)
-                  <tr>
-                    <td>{{++$i}}</td>
-                    <td>{{$category->name}}</td>
-                    <td>
-                    	<form action="{{route('admin.category.destroy',$category->id)}}" method="POST">
-                    		<a href="{{route('admin.category.edit',$category->id)}}" class="btn btn-success">edit</a>
-                    	@csrf
-                    	@method('DELETE')
-                    	<button type="submit" class="btn btn-danger">Delete</button>
-                    	</form>
-                    	
-                    </td>
+	                  <tr>
+	                    <td>{{++$i}}</td>
+	                    <td>{{$category->name}}</td>
+	                    <td>{{$category->subname}}</td>
+	                    <td>
+	                    	<form action="{{route('admin.category.destroy',$category->id)}}" method="POST">
+	                    		<a href="{{route('admin.category.edit',$category->id)}}" class="btn btn-success">edit</a>
+	                    	@csrf
+	                    	@method('DELETE')
+	                    	<button type="submit" class="btn btn-danger">Delete</button>
+	                    	</form>
+	                    	
+	                    </td>
                   </tr>
                   @endforeach
                 </tbody>
