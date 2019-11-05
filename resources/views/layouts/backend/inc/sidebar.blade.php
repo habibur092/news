@@ -30,27 +30,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
                 <i class="ni ni-ungroup text-orange"></i>
-                <span class="nav-link-text">Examples</span>
+                <span class="nav-link-text">Categorys</span>
               </a>
               <div class="collapse" id="navbar-examples">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="../../pages/examples/pricing.html" class="nav-link">Pricing</a>
+                    <a href="{{ route('admin.category.create')}}" class="nav-link">Add Category</a>
                   </li>
                   <li class="nav-item">
-                    <a href="../../pages/examples/login.html" class="nav-link">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../../pages/examples/register.html" class="nav-link">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../../pages/examples/lock.html" class="nav-link">Lock</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../../pages/examples/timeline.html" class="nav-link">Timeline</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../../pages/examples/profile.html" class="nav-link">Profile</a>
+                    <a href="{{ route('admin.category.index')}}" class="nav-link">All Category</a>
                   </li>
                 </ul>
               </div>
